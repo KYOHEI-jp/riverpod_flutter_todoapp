@@ -80,7 +80,10 @@ class ToDoApp extends ConsumerWidget {
     final todoList = ref.watch(todoListProvider);
 
     return Scaffold(
-      appBar: AppBar(title: Text('ToDo App with Riverpod')),
+      appBar: AppBar(
+        title: Text('ToDoアプリ'),
+        centerTitle: true,
+      ),
       body: ListView.builder(
         itemCount: todoList.length,
         itemBuilder: (context, index) {
